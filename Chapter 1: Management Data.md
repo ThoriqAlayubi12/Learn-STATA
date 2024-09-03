@@ -48,6 +48,18 @@ untuk menampilkan summary dari data, ada beberapa perintah yang dapat digunakan 
 ```{stata}
 describe
 ```
+_storage type_ dalam hasil dari **describe** membantu kita mendapatkan informasi tentang tipe data.
+
+**int**:integer (angka bulat tanpa desimal)
+
+**byte**: angka bulat dengan limit atau kriteria/ketentuan. biasanya untuk koding variabel kategori
+
+**float**: angka dengan desimal
+
+**str**: string atau text
+
+**double**: nilai numerik dan pecahan secara presisi
+
 * perintah **summarize** untuk menampilkan ringkasan deskriptif dari variabel dalam dataset
 ```{stata}
 summarize
@@ -55,6 +67,11 @@ summarize
 * untuk custom pada beberapa variabel/variabel tertentu, dapat menggunakan
 ```{stata}
 summarize variabel1 variabel2
+```
+
+* informasi detail juga bisa diperoleh dengan perintah
+```{stata}
+codebook namavariabel
 ```
 
 ## MENAMPILKAN ROW DATA
@@ -162,7 +179,9 @@ save "namafile.dta",replace
 
 kamu sudah sampai sini? selamat, chapter 1 selesai dahulu. jangan lupa untuk selalu tersenyum dan bersyukur
 
-jabat hangat dari saya,
+untuk segala pertanyaan tentang postingan ini, kamu bisa menghubungi aku via instagram @thoriq.alayubi
+
+Jabat Hangat dari Saya,
 
 Moch. Thoriq Assegaf Al-Ayubi
 
