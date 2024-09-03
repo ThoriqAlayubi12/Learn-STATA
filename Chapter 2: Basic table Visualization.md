@@ -60,7 +60,7 @@ tab variabel1 variabel2, row nofreq
 ## FREKUENSI UNTUK LEBIH DARI 2 VARIABEL
 untuk melihat frekuensi lebih dari 2 variabel, maka akan dibagi menjadi sub-kategori mulai dari variabel ke 3
 * pastikan tidak ada yang _missing_
-* ```{stata}
+```{stata}
 keep if variabel !=.
 ```
 artinya memastikan variabel yang missing sudah dihilangkan
