@@ -109,6 +109,13 @@ tostring variabel, gen(namavariabelbaru)
 destring variabel, gen(namavariabelbaru)
 ```
 
+catatam: **destring** dan **tostring** digunakan untuk data angka yang kebaca sebagai string. sedangkan untuk mengubah text menjadi angka gunakan **encode** dan **decode**
+
+```{stata}
+encode varlama, gen(varbaru)
+```
+varlama sebagai text dan varbaru sebagai angka
+
 ## MEMBUANG VARIABEL
 drop variabel menggunakan kriteria
 _contoh: variabel yang nilainya = 1 akan didrop_
@@ -154,6 +161,7 @@ nb: kriteria disesuaikan dengan rumus masing-masing.
 * sedangkan untuk kriteria lebih dari 2 dapat menggunakan code berikut
 ```{stata}
 recode variabellama (1/5=1"label1")(6/10=2"label2")(11/15=3"label3"),gen(variabelbaru)
+recode variabellama (min/5=1"label1")(6/10=2"label2")(11/max=3"label3"),gen(variabelbaru)
 ```
 dari script diatas,
 
@@ -163,6 +171,12 @@ dari script diatas,
 
 dan 11/15 artinya 11-15
 
+cara lain adalah dengan gen dengan kriteria lebih dari dua variabel
+
+```{stata}
+gen varbaru = (varlama1 == 1 & age >50) | (varlama1 == 2 & age >55)
+```
+
 ## IDENTIFIKASI MISSING VALUE
 ```{stata}
 misstable summarize
@@ -171,6 +185,22 @@ misstable summarize
 ```{stata}
 misstable pattern
 ```
+
+## UNTUK INSPEKSI KATEGORI BARU
+```{stata}
+tabstat varlama, by(varbaru) stat(min max mean p25 p50 p75 sd)
+```
+
+bisa ditambahkan perintah if
+```{stata}
+tabstat varlama if variabel_lain ==1, by(varbaru) stat(min max mean p25 p50 p75 sd)
+```
+
+## UNTUK MEMBUAT KATEGORI BERDASARKAN PERSENTIL
+```{stata}
+xtile varbaru = varlama,nq(5)
+```
+script diatas akan membagi variabel lama menjadi 5 kategori berdasarkan nilai persentil yang berimbang
 
 ## SAVE DATA SEBAGAI FILE FORMAT: DTA
 ```{stata}
