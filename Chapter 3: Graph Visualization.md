@@ -84,6 +84,7 @@ contoh membuat histogram chart di stata:
 use "dataset.dta", clear
 label variables umur (umur penderita kanker)
 histogram umur
+histogram umur, normal
 ```
 dengan script diatas maka nilai yang ditampilkan dalam histogram adalah **nilai density**
 
@@ -122,7 +123,13 @@ hist var1, by(var2)
 ```
 
 ## Pie Chart
-belum sempet bos, lelah hahaha
+```{stata}
+graph pie, over(var1) by(var2)
+```
+
+```{stata}
+graph pie, over(diag) plabel(_all percent,size(*1.1) format(%4.1g) color(white)) legend(size(vsmall)) legen(rows(4)) plotregion(lstyle(none)) graphregion(fcolor(white)) title("Distribusi Diagnosa Pasien") subtitle("kelompok A FETP 2024") note("data merupakan data laboratory exercise 2")
+```
 
 ## bar chart
 graph ini dapat digunakan untuk melihat frekuensi antar kategori dan juga untuk melihat pengaruh intervensi. bar chart juga bisa untuk menyajikan perubahan overtime
@@ -153,6 +160,7 @@ graph ini sangat baik untuk mengidentifikasi distribusi data numerik. graph ini 
 
 ```{stata}
 graph hbox var1
+graph box var1 if age >55
 ```
 untuk grafik vertikal
 ```{stata}
@@ -173,4 +181,6 @@ scatter var1 var2
 kita juga bisa menambahkan garis untuk melihat kecenderungan dengan menggunakan **lfit**
 ```{stata}
 scatter var1 var2, title("judulnya ini") ytitle("label axis y") xtitle("label axis X") mcolor(navy) || lfit var1 var2, legend(off)
+twoway (scatter var1 var2) (lfit var1 var2)
+twoway (scatter var1 var2) (lfitci var1 var2)
 ```
