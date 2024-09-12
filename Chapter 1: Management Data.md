@@ -177,6 +177,10 @@ cara lain adalah dengan gen dengan kriteria lebih dari dua variabel
 gen varbaru = (varlama1 == 1 & age >50) | (varlama1 == 2 & age >55)
 ```
 
+```{stata}
+gen varbaru =.
+replace varbaru = 1 if kriteria
+```
 ## IDENTIFIKASI MISSING VALUE
 ```{stata}
 misstable summarize
@@ -201,6 +205,13 @@ tabstat varlama if variabel_lain ==1, by(varbaru) stat(min max mean p25 p50 p75 
 xtile varbaru = varlama,nq(5)
 ```
 script diatas akan membagi variabel lama menjadi 5 kategori berdasarkan nilai persentil yang berimbang
+
+## UNTUK IDENTIFIKASI OUTLIER
+```{stata}
+findit iqr
+**pilih sed4
+iqr age
+```
 
 ## SAVE DATA SEBAGAI FILE FORMAT: DTA
 ```{stata}
