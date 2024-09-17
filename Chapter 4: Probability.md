@@ -107,7 +107,7 @@ sensitivitas atau P(B|A) = 99/100 = 99%
 
 prevalensi atau P(A) atau unconditional probability of disease = 100/10.000 = 1%
 
-unconditional probability of positive test atau persentase hasil test positif = 198/10.000 = 0,0198
+unconditional probability of positive test atau persentase hasil test positif atau P(B) = 198/10.000 = 0,0198
 
 maka bayes formula kemungkinan orang sakit apabila memiliki hasil test positif  = P(A|B) = P(B|A)P(A)/P(B)
 
