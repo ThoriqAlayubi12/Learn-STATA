@@ -139,9 +139,25 @@ keep if variabel == 1 & variabel == 2
 ```
 
 ## LABELING VARIABEL
+untuk melakukan labeling pada data dalam variabel
 ```{stata}
 label define namalabel 1"label1" 2"label2"
 label value variabel namalabel
+```
+
+untuk memberi label "nama" pada variabel
+```
+label var variabel1 "nama variabel 1"
+```
+
+untuk melihat list label yang kita buat
+```
+label list
+```
+
+untuk mengubah atau menambahkan kategori dalam label yang sudah ada
+```
+label define namalabel 9999"keterangan baru",modify
 ```
 
 ## MEMBUAT VARIABEL BARU
@@ -181,6 +197,19 @@ gen varbaru = (varlama1 == 1 & age >50) | (varlama1 == 2 & age >55)
 gen varbaru =.
 replace varbaru = 1 if kriteria
 ```
+
+apabila kategori dalam suatu variabel terlalu banyak,transformasi data bisa kita lakukan dengan menggunakan **freq** sebagaimana contoh berikut:
+
+apabila kita ingin mengubah kategori _variabellama_ yang memiliki frekuensi <5 sebagai **"lainnya"** maka kita dapat menulis
+
+```
+egen freq_new = count(variabellama),by(variabellama)
+gen variabel_baru = variabellama
+replace variabel_baru = 999 if freq_new <5
+label define labellama 999"lainnya",modify
+```
+
+
 ## IDENTIFIKASI MISSING VALUE
 ```{stata}
 misstable summarize
