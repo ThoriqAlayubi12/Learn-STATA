@@ -12,6 +12,11 @@ dalam CI 95% misalnya, rentang upper dan lower berkaitan dengan potensi pengulan
 
 dasar penggunaan probabilitas dalam statistika adalah karena adanya aspek "ketidakpastian" dalam kehidupan yang fanaaaa inii.
 
+statistika inferential diukur melalui tiga cara yaitu:
+- p-value
+- nilai hitung > nilai tabel
+- 95% CI --> berkaitan dengan interval estimation. terbagi pada cut of 0 untuk numerik (mean) dan cut of 1 untuk kategorik (RR/OR)
+
 ## rule of thumb untuk CI
 
 signifikansi point (dalam uji hipotesis): p-value, ditentukan oleh batas nilai alfa, biasanya 5% atau 0,05. pembagian signifikansi didasarkan pada
@@ -27,6 +32,10 @@ berkaitan dengan hal ini, ada tiga hal yang bisa kita liat:
 - besaran informasi yang kita kumpulkan. semakin besar sampel semakin kondusif rentang CI. hal ini berkaitan dengan optimasi penelitian berdasarkan pada perhitungan besaran sampel
 - presisi pengukuran
 
+cara interpretasi CI adalah **95% popuilasi memiliki rata-rata variabel di range CI tersebut**
+artinya pada 95%: 5% ruang untuk error random, sedangkan 95% adalah garansi dari error sistematik (bias confounding, dkk)
+
+dengan kondisi yang sama, peningkatan taraf CI akan berdampak pada pelebaran interval, sedangkan pada preliminary, peningkatan taraf CI berdampak pada peningkatan sampel dan menyempitkan CI (lebih presisi)
 **review OR sejenak**
 
 OR=1 artinya tidak ada signifikansi atau hubungan
@@ -109,5 +118,23 @@ https://statisticsbyjim.com/basics/central-limit-theorem/
 pada sampel yang kecil, test normalitas sulit untuk dilakukan. biasanya akan kita lakukan transformasi data untuk mengupayakan asumsi normalitas terpenuhi. selain itu juga bisa dilakukan metode non paramterik seperti:
 - boostraping t interval: metode teknik untuk estimasi parameter dan variabel dalam populasi ketika kita ingin mengambil nilai mean dan variasi, secara terus menerus pada data simulasi yang sudah kita tentukan. biasanya kita akan mengatur besaran nilai boostrap (B), misal: 500,1000, dsb
 - CI for median
+
+## latihan pada STATA
+
+rumus umum
+```
+ci mean varname
+ci proportion varname
+by var1: ci mean varname
+```
+
+untuk custom nilai bisa menggunakan
+```
+cii n mean sd
+ztesti n mean sd nilai_yang_diuji
+```
+untuk ztesti yang dilihat yang **ha:mean !=**
+
+bisa juga menggunakan
 
 sebentar, lanjut nanti, baterai lowbat boss
