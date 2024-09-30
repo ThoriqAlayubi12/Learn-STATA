@@ -15,7 +15,7 @@ dasar penggunaan probabilitas dalam statistika adalah karena adanya aspek "ketid
 statistika inferential diukur melalui tiga cara yaitu:
 - p-value
 - nilai hitung > nilai tabel
-- 95% CI --> berkaitan dengan interval estimation. terbagi pada cut of 0 untuk numerik (mean) dan cut of 1 untuk kategorik (RR/OR)
+- 95% CI --> berkaitan dengan interval estimation. terbagi pada cut of 0 untuk numerik (different mean) dan cut of 1 untuk kategorik (RR/OR)
 
 ## rule of thumb untuk CI
 
@@ -130,9 +130,26 @@ by var1: ci mean varname
 
 untuk custom nilai bisa menggunakan
 ```
-cii n mean sd
-ztesti n mean sd nilai_yang_diuji
+cii means n mean sd #untuk t distribution, defaultnya 95
+cii means n mean sd, level(99)
+ztesti n mean sd nilai_yang_diuji #untuk z distribution
 ```
+
+## ilmu baruuuu
+
+untuk reshape data long to wide or vise versa
+```
+#long ke wide
+reshape wide varname1 varname2, i(id) j(period)
+#mengembalikan
+reshape long
+
+#wide ke long --> j adalah new variable
+reshape long varname1 varname2, i(id) j(period)
+#mengembalikan
+reshape wide
+```
+
 untuk ztesti yang dilihat yang **ha:mean !=**
 
 bisa juga menggunakan
