@@ -31,13 +31,13 @@ lpattern(solid dash dash_dot) ///
 msymbol(circle diamond square) ///
 ytitle("Percentage")
 ```
-perintah **lpattern** digunakan untuk mengatur bentuk garis yang ditampilkan dalam grafik
+perintah `lpattern` digunakan untuk mengatur bentuk garis yang ditampilkan dalam grafik
 
-perintah **msymbol** digunakan untuk memberikan simbol pada titik dalam garis
+perintah `msymbol` digunakan untuk memberikan simbol pada titik dalam garis
 
 ### membuat banyak line chart
 
-teman-teman bisa menggunakan perintah **by** . penampilan ini biasa disebut sebagai facewrap sebagaimana contoh berikut:
+teman-teman bisa menggunakan perintah `by` . penampilan ini biasa disebut sebagai facewrap sebagaimana contoh berikut:
 
 A. tanpa _facewrap_
 ```{stata}
@@ -116,7 +116,7 @@ jangan lupa untuk menyesuaikan interval kelas dalam histogram. penyesuaian ini b
 secara otomatis, pengkategorian dalam software analisis mengikuti _sturges rule_ = log2(n)
 
 ### face wrap histogram
-histogram juga bisa menggunakan perintah **by**
+histogram juga bisa menggunakan perintah `by`
 
 ```{stata}
 hist var1, by(var2)
@@ -134,8 +134,8 @@ graph pie, over(diag) plabel(_all percent,size(*1.1) format(%4.1g) color(white))
 ## bar chart
 graph ini dapat digunakan untuk melihat frekuensi antar kategori dan juga untuk melihat pengaruh intervensi. bar chart juga bisa untuk menyajikan perubahan overtime
 
-**bar** untuk column chart (nilai di vertikal y)
-**hbar** untuk bar chart (nilai di horizontal x)
+`bar` untuk column chart (nilai di vertikal y)
+`hbar` untuk bar chart (nilai di horizontal x)
 
 ```{stata}
 graph bar var1
@@ -145,13 +145,13 @@ graph bar var1
 graph hbar var1
 ```
 
-kamu bisa melakukan sorting dengan perintah **sort()** dan **descending** atau **ascending**
+kamu bisa melakukan sorting dengan perintah `sort()` dan `descending` atau `ascending`
 ```{stata}
 graph hbar (mean) jumlahkasus, ///
 over(provinsi, sort(1) descending label(labsize(*0.7))) ///
 bar(1, color(ebblue))
 ```
-**(mean)** menunjukkan bahwa variabel _jumlahkasus_ akan ditampilkan nilai rata-ratanya. ketentuan ini bisa diganti dengan **(count)** untuk frequency, **(median)** untuk median, dan seterusnya
+`(mean)` menunjukkan bahwa variabel _jumlahkasus_ akan ditampilkan nilai rata-ratanya. ketentuan ini bisa diganti dengan **(count)** untuk frequency, **(median)** untuk median, dan seterusnya
 
 _for the further exploratory about bar chart, you can visit the following link_ **_https://www.stata.com/manuals/g-2graphbar.pdf_**
 
@@ -167,7 +167,7 @@ untuk grafik vertikal
 graph box var1
 ```
 
-untuk grafik box plot berdasarkan variabel kategorik dapat menggunakan **over()**
+untuk grafik box plot berdasarkan variabel kategorik dapat menggunakan `over()`
 ```{stata}
 graph box var1 var2 over(var3)
 ```
@@ -178,7 +178,7 @@ graph ini berfungsi untuk melihat distribusi dan sebaran data secara numerik
 scatter var1 var2
 ```
 
-kita juga bisa menambahkan garis untuk melihat kecenderungan dengan menggunakan **lfit**
+kita juga bisa menambahkan garis untuk melihat kecenderungan dengan menggunakan `lfit`
 ```{stata}
 scatter var1 var2, title("judulnya ini") ytitle("label axis y") xtitle("label axis X") mcolor(navy) || lfit var1 var2, legend(off)
 twoway (scatter var1 var2) (lfit var1 var2)
