@@ -132,9 +132,24 @@ untuk custom nilai bisa menggunakan
 ```
 cii means n mean sd #untuk t distribution, defaultnya 95
 cii means n mean sd, level(99)
-ztesti n mean sd nilai_yang_diuji #untuk z distribution
 ```
 
+## uji one sample
+
+untuk asumsi distribusi normal atau z distribution
+```
+ztesti n mean sd nilai_yang_diuji
+ztest varname == 120 #nilai yang diuji hipotesisnya
+ztest varname == 120, level(99)
+```
+
+untuk asumsi distribusi tidak normal atau t distribution
+```
+ttest varname == 120 #nilai yang diuji hipotesisnya
+ttest varname == 120, level(99)
+ttesti n mean sd nilai_yang_diuji
+ttesti n mean sd nilai_yang_diuji, level(99)
+```
 ## ilmu baruuuu
 
 untuk reshape data long to wide or vise versa
