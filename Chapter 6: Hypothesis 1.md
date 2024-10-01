@@ -99,7 +99,8 @@ hati hati juga dalam melakukan framing hasil penelitian: chance factor, confiden
 
 ![image](https://github.com/user-attachments/assets/ee1f0f46-bb07-492c-9788-5d8099368777)
 
+nah untuk langkah-langkah di STATA-nya ada di Chapter 5
 
+alhamdulillah selesai,capek, lelah, berasappp
 
-
-
+semoga bermanfaat ya allah
