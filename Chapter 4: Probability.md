@@ -154,6 +154,6 @@ coba kerjakan dengan rumus pada gambar diatas
 
 oh iya, funfact, binomial distribution ini bisa dihitung juga di excel dengan fungsi
 
-**=BINOMDIST(x,n,p,FALSE)**
+`=BINOMDIST(x,n,p,FALSE)`
 
 untuk lanjutannya, nanti dulu ya, aku meriang
