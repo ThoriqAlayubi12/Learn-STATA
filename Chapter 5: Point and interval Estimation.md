@@ -111,9 +111,7 @@ untuk lebih lengkap, command untuk CI dapat dilihat pada gambar dibawah ini
 
 ## CI pada data yang tidak normal
 
-pada data yang tidak normal, kita menggunakan central limit theorem (CLT). informasi lebih lanjut tentang CLT dapat kami akses di link berikut:
-
-https://statisticsbyjim.com/basics/central-limit-theorem/
+pada data yang tidak normal, kita menggunakan central limit theorem (CLT). informasi lebih lanjut tentang CLT dapat kami akses di link berikut [berikut](https://statisticsbyjim.com/basics/central-limit-theorem/)
 
 pada sampel yang kecil, test normalitas sulit untuk dilakukan. biasanya akan kita lakukan transformasi data untuk mengupayakan asumsi normalitas terpenuhi. selain itu juga bisa dilakukan metode non paramterik seperti:
 - boostraping t interval: metode teknik untuk estimasi parameter dan variabel dalam populasi ketika kita ingin mengambil nilai mean dan variasi, secara terus menerus pada data simulasi yang sudah kita tentukan. biasanya kita akan mengatur besaran nilai boostrap (B), misal: 500,1000, dsb
