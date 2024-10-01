@@ -99,7 +99,7 @@ hati hati juga dalam melakukan framing hasil penelitian: chance factor, confiden
 
 ![image](https://github.com/user-attachments/assets/ee1f0f46-bb07-492c-9788-5d8099368777)
 
-nah untuk langkah-langkah di STATA-nya ada di Chapter 5
+nah untuk langkah-langkah di STATA-nya ada di [Chapter 5 Tentang One-Sample test](https://github.com/ThoriqAlayubi12/Learn-STATA/blob/main/Chapter%205%3A%20Point%20and%20interval%20Estimation.md#uji-one-sample)
 
 alhamdulillah selesai,capek, lelah, berasappp
 
