@@ -18,6 +18,8 @@ uji hipotesis adalah cara formal untuk melakukan metode scientific dan mempredik
 
 ada satu kebenaran fundamental dalam metode ilmiah bahwa kita dapat benar benar membuktikan hipotesis dengan setuju/tidak setuju hipotesis tersebut. kita menciptakan H0 dan kita akan membuktikan bahwa H0 kita itu ditolak. **kenapa? karena segalanya adalah benar sampai ada yang membuktikan bahwa itu salah.**
 
+keuntungan p-value adalah selalu memiliki interpretasi yang sama karena domainnya adalah probabilitas yaitu dari 0-1. keterbatasannya adalah tidak bisa menggambarkan detail perbedaan (plus minus dsb). itulah kenapa kita membutuhkan yang namanya confidence interval. 
+
 satu ketetapan yang harus kita lakukan dari 9 kriteria Hill adalah **konsistensi temuan di lapangan**.
 
 ## Kriteria Hill
@@ -79,7 +81,7 @@ A type I error consists of **rejecting the null hypothesis in a situation where 
 
 ### error tipe 2 (beta)
 
-A type II error consists of **failing to reject the null hypothesis in a situation where it was false**. artinya sebenarnya A dan B ada hubungan tetapi hasil kita menunjukkan tidak adanya hubungan signifikan. error tipe 2 (beta) berkaitan dengan tingkat kekuatan penelitian (power). wajarnya error tipe 2 adalah 20% artinya power penelitian 80%.
+A type II error consists of **failing to reject the null hypothesis in a situation where it was false**. artinya sebenarnya A dan B ada hubungan tetapi hasil kita menunjukkan tidak adanya hubungan signifikan. error tipe 2 (beta) berkaitan dengan tingkat kekuatan penelitian (power). wajarnya error tipe 2 adalah 20% artinya power penelitian 80%. ketika penelitian memiliki power <80% penelitian kita **kurang nendang** atau tidak berguna. z
 
 dalam dinamika penelitian, hubungan error tipe 1 dan tipe 2 adalah hubungan yang tidak sejalan bersama-sama. penggunaan error tipe 1 dan 2 ini sering berkaitan dengan perhitungan estimasi besar sampel. berkaitan dengan interpretasi yang mudah, maka kesalahan ini dapat diukur sebagaimana berikut:
 
@@ -88,3 +90,16 @@ dalam dinamika penelitian, hubungan error tipe 1 dan tipe 2 adalah hubungan yang
 ## Hipotesis Null
 
 adalah hipotesis yang di uji. kenapa? karena manusia tidak memiliki kapasitas untuk menguji Ha. dalam metodologinya, H0 ada untuk dibuktikan apakah penelitian kita bisa menolak H0 tersebut atau gagal menolak. sekali lagi, yang kita buktikan adalah **penolakannya**, bukan penerimaannya atau kebenarannya. kita tidak pernah bisa membuktikan sesuatu itu benar tapi kita bisa membuktikan bahwa sesuatu itu salah.
+
+selain statistical significance, ada juga **clinical significance**. hal ini dapat membantu apakah signifikansi kita adalah suatu realita atau hanya sekedar **random chance factor**.
+
+hati hati juga dalam melakukan framing hasil penelitian: chance factor, confidence interval, estimation.
+
+## langkah-langkah uji hipotesis
+
+![image](https://github.com/user-attachments/assets/ee1f0f46-bb07-492c-9788-5d8099368777)
+
+
+
+
+
