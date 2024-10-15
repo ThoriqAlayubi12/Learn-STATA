@@ -14,6 +14,7 @@ fixed disifati pada n1, n2, m1, dan m2
 pada tabel diatas, **nilai n1,1 diupayakan sebagai nilai sel yang paling kecil** untuk menghitung probabilitas sehingga bisa melihat kumulatif distribusi dari _hypergeometric_.
 
 Formula _distribusi hypergeometric_
+
 ![image](https://github.com/user-attachments/assets/6af502bd-2dd9-4cbf-8849-9050c640d2f3)
 
 fisher exact hanya melihat hasil **one-tail**
@@ -69,6 +70,7 @@ setting up-nya:
 - row = data penyakit
 
 contoh hipotesisnya adalah
+
 ![image](https://github.com/user-attachments/assets/a8c48c3d-12e2-478c-bfac-1eab1fb2a6bc)
 
 hipotesis alternatifnya adalah tidak ordinal.
