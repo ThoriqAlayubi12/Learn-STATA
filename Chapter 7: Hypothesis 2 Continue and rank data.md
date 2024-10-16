@@ -47,6 +47,7 @@ untuk menguji varian, bisa dilakukan dengan syntax
 
 ```
 robvar varname, by(variabel_kelompok)
+sdtesti n mean sd n mean sd
 ```
 
 ketika data menunjukkan varian tidak sama, maka uji independent T-test dalam dilakukan dengan syntax
