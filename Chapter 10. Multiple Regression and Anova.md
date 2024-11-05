@@ -11,6 +11,8 @@ multiple linier adalah regresi untuk variabel dependen berupa **continuous/quant
 ada beberapa asumsi yang harus dipenuhi ketika menggunakan model ini, yaitu:
 **1. normalitas regresi, menggunakan uji skewness kurtosis**
 ```
+regress vardep varind1 varind2 varind3
+predict res,r
 sktest res
 swilk res
 ```
@@ -41,6 +43,8 @@ dalam stata, menggunakan perintah `regress` dengan diikuti variabel dependen dan
 ```
 regress vardep varind1 varind2 varind3
 regress vardep i.varind1 b(2)i.varind2 lb.varind3
+**untuk mengganti CI dengan nilai beta
+regress vardep i.varind1 b(2)i.varind2 lb.varind3, beta
 ```
 
 `i.` pada `i.varind1` menunjukkan bahwa pada variabel independen 1 diambil kategori pertama sebagai reference
