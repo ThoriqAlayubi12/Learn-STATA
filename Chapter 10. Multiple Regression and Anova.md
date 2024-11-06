@@ -21,7 +21,7 @@ dikatakan normal apabila p-value > 0,05
 **2. heterokedastisitas**
 ```
 estat hettest
-rvfplot
+rvfplot, yline(0) graphregion(fcolor(white))
 ```
 melihat adanya pola tertentu atau tidak
 
