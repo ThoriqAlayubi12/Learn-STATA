@@ -48,7 +48,8 @@ dwstat
 **6. linearity**
 ```
 regress y x1 x2 x3
-rvfplot
+predict resid, r
+scatter resid BMI, graphregion(fcolor(white))
 ```
 melihat antara variabel dependen dengan variabel independen apakah memiliki hubungan yang linier
 
