@@ -8,11 +8,13 @@ persamaan dasar untuk multiple linier regression adalah
 
 multiple linier adalah regresi untuk variabel dependen berupa **continuous/quantitative data** dengan jumlah variabel prediktor lebih dari satu.
 
-ada beberapa asumsi yang harus dipenuhi ketika menggunakan model ini, yaitu:
-**1. normalitas regresi, menggunakan uji skewness kurtosis**
+ada beberapa asumsi yang harus dipenuhi ketika menggunakan model ini, disebut least square appoarch, yaitu:
+
+**1. normalitas regresi, menggunakan uji skewness kurtosis atau shapiro wilk**
 ```
 regress vardep varind1 varind2 varind3
 predict res,r
+qnorm res
 sktest res
 swilk res
 ```
@@ -32,10 +34,23 @@ estat collin
 ```
 asumsi terpenuhi apabila VIF<10 dan >0.1
 
-**5. interaksi antar variabel independen.**
+**4. interaksi antar variabel independen.**
 ```
 acprplot
 ```
+
+**5. independen of error atau autokorelasi**
+```
+regress y x1 x2 x3
+dwstat
+```
+
+**6. linearity**
+```
+regress y x1 x2 x3
+rvfplot
+```
+melihat antara variabel dependen dengan variabel independen apakah memiliki hubungan yang linier
 
 dalam regresi, ada asumsi bahwa variabel prediktor lain dalam model adalah konstan, sehingga dalam interpretasinya harus ada narasi _"controlling for the other variables"_
 
