@@ -44,3 +44,28 @@ coefplot, eform xline(0, lcolor(midblue)) mcolor(midblue) graphregion(fcolor(whi
 1.cursmoke= "{bf: Current Smoking}" 1.hyperten= "{bf: Hypertension}" 1.stroke= "{bf: Stroke}" 1.diabetes= "{bf: Diabetes}") ///
 mlabel format(%6.3g) mlabposition(12) mlabgap (*2) drop(_cons) xline(1)
 ```
+## untuk melihat model mana yang paling fit dan ideal
+
+### Uji F Partial
+```
+** harus store modelnya dulu ya
+ftest m1 m2
+```
+
+### uji likelihood
+```
+lrtest m1 m2
+** pvalue >0,05 maka variabel tambahan tidak berguna, asas: simple is better
+```
+
+### membandingkan AIC dan BIC
+```
+est stat m1 m2
+** AIC digunakan ketika kita explorasi sedangkan BIC untuk konfirmasi
+** nilai yang lebih rendah yang kita gunakan karena menunjukkan model yang lebih ideal
+```
+
+### cara menjadi transformasi data yang lebih ideal
+```
+ladder vardep
+```
