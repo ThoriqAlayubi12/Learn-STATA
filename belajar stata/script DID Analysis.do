@@ -51,12 +51,29 @@ gen did=waktu*perlakuan
 didregress (y) (did),group(country) time(year)
 estat trendplots
 estat ptrends
+** the Granger causality test
+estat granger
+
 **untuk menambahkan kovariat dalam model
 didregress (y x2 x3) (did), group(country) time(year) aeq
 **x2 dan x3 sebagai kovariat dalam model
+
+**To use HC2 bias-corrected standard errors with the Bell and McCaffrey (2002) degrees-of-freedom adjustment, we can add the vce(hc2) option.
+didregress (satis) (procedure), group(hospital) time(month) vce(hc2)
+
+**Or, in StataNow™, to use the HC3 bias-corrected standard errors with the Hansen (2005) adjustment, add the vce(hc3, hansen) option.
+didregress (satis) (procedure), group(hospital) time(month) vce(hc3, hansen)
+
+**To use the aggregation method proposed by Donald and Lang (2007), we can add the aggregate(dlang) option.
+didregress (satis) (procedure), group(hospital) time(month) aggregate(dlang)
+
+**We can add the varying option if we wanted to allow some of the coefficients to vary across groups.
+didregress (satis) (procedure), group(hospital) time(month) aggregate(dlang, varying)
+
 
 *SIMPAN LOG*
 log close
 
 **REFERENCES**
+
 ** Mailman School of Public Health, Columbia University. Difference-in-Differences Estimation. Available at: https://www.publichealth.columbia.edu/research/population-health-methods/difference-difference-estimation
